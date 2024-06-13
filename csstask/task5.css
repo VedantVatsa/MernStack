@@ -1,0 +1,59 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e1e137;
+  color: brown;
+  font-size: large;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #fff;
+  color: blue;
+  text-decoration: none;
+  border-right: 20px solid black;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  background-color: #f0e68c;
+  color: brown;
+}
+
+.content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+h1 {
+  font-size: 2em;
+  color: brown;
+  margin-top: 0;
+}
+
+p {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dashed #4b0082;
+}
+
+.last {
+  font-style: italic;
+}

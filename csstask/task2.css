@@ -1,0 +1,72 @@
+/* task2.css */
+
+#navbar {
+  border: 2px solid black;
+  width: 150px;
+  font-family: Arial, sans-serif;
+}
+
+#home {
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#java,
+#css,
+#html,
+#bootstrap {
+  background-color: lightblue;
+  color: blue;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+#java:hover,
+#css:hover,
+#html:hover,
+#bootstrap:hover {
+  background-color: #ddd;
+}
+
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+#out {
+  background-color: #fff;
+  border: 2px solid black;
+  width: 45%;
+  border-collapse: collapse;
+}
+#navbar1 {
+  display: flex;
+  background-color: #ddd;
+}
+
+#navbar1 a {
+  text-decoration: none;
+  padding: 15px 30px;
+  color: blue;
+  text-align: center;
+  line-height: 20px;
+  border-right: 1px solid blue;
+}
+
+#home1:hover,
+#java1:hover,
+#css1:hover,
+#html1:hover {
+  background-color: grey;
+}

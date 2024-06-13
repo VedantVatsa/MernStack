@@ -1,0 +1,109 @@
+/* styles.css */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f7fa;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #00796b;
+  color: #fff;
+}
+
+.main-title {
+  font-size: 2.5em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.sub-title,
+.time {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.task-section {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.task-section:hover {
+  transform: scale(1.02);
+}
+
+.section-title {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #00796b;
+  border-bottom: 2px solid #00796b;
+  padding-bottom: 5px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 15px;
+  font-size: 1.1em;
+}
+
+.task-table th {
+  background-color: #00796b;
+  color: #fff;
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.task-table tr:hover {
+  background-color: #e0f2f1;
+}
+
+.task-table a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.task-table a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .task-section {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .main-title {
+    font-size: 2em;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .task-table th,
+  .task-table td {
+    font-size: 1em;
+    padding: 10px;
+  }
+}
