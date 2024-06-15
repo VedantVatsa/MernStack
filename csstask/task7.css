@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjusted to full viewport height */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #b03060;
+}
+
+.registration-container {
+  width: 400px; /* Fixed width for better design control */
+  padding: 20px;
+  background-color: #8b0018;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  color: white;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form input[type="tel"],
+.registration-form select,
+.registration-form textarea {
+  width: calc(
+    100% - 22px
+  ); /* Adjusted width to account for padding and border */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px; /* Increased bottom margin for better spacing */
+}
+
+.registration-form textarea {
+  resize: vertical;
+  height: 60px; /* Adjusted height */
+}
+
+.registration-form input[type="radio"] {
+  margin-right: 5px;
+}
+
+.registration-form label[for="male"],
+.registration-form label[for="female"],
+.registration-form label[for="other"] {
+  margin-right: 10px; /* Adjusted spacing between radio buttons */
+}
+
+.registration-form select {
+  height: 36px; /* Adjusted select height for better alignment */
+}
+
+.register-btn {
+  background-color: #ffffff;
+  color: #8b0018;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.register-btn:hover {
+  background-color: #e0e0e0;
+}
