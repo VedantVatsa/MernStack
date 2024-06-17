@@ -11,7 +11,14 @@
       crossorigin="anonymous"
     />
     <style>
-      .form-container {
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+      }
+      .transparent-box {
         max-width: 600px;
         margin: auto;
         padding: 20px;
@@ -19,117 +26,212 @@
         border-radius: 15px;
         background-color: #f9f9f9;
       }
-      .form-group {
-        margin-bottom: 15px;
-      }
-      .form-group.inline {
+      .lbl {
         display: flex;
         align-items: center;
       }
-      .form-group.inline label {
-        flex: 0 0 150px;
-        margin-bottom: 0;
+      .cust-width {
+        width: 100%;
       }
-      .form-group.inline .form-control {
-        flex: 1;
+      .input-group-text {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      .btn-send {
-        display: block;
-        margin: 20px auto 0;
+      .input-group-text img {
+        max-height: 1.2em;
       }
     </style>
   </head>
   <body>
     <div class="container mt-5">
-      <form class="form-container needs-validation" novalidate>
-        <div class="form-group inline">
-          <label for="firstName">First Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="firstName"
-            placeholder="Enter First Name"
-          />
-        </div>
-        <div class="form-group inline">
-          <label for="email">E-Mail</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="Enter E-Mail"
-          />
-        </div>
-        <div class="form-group inline">
-          <label for="phone">Phone #</label>
-          <input
-            type="tel"
-            class="form-control"
-            id="phone"
-            placeholder="Enter Phone Number"
-          />
-        </div>
-        <div class="form-group inline">
-          <label for="address">Address</label>
-          <input
-            type="text"
-            class="form-control"
-            id="address"
-            placeholder="Enter Address"
-          />
-        </div>
-        <div class="form-group inline">
-          <label for="city">City</label>
-          <input
-            type="text"
-            class="form-control"
-            id="city"
-            placeholder="Enter City"
-          />
-        </div>
-        <div class="form-group inline">
-          <label for="state">State</label>
-          <input
-            type="text"
-            class="form-control"
-            id="state"
-            placeholder="Enter State"
-          />
-        </div>
-        <div class="form-group inline">
-          <label>Do you have hosting?</label>
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="hosting"
-              id="hostingYes"
-              value="yes"
-            />
-            <label class="form-check-label" for="hostingYes">Yes</label>
+      <div class="transparent-box">
+        <form class="frm needs-validation" novalidate>
+          <div class="row mb-4">
+            <div class="col-2 lbl">First Name</div>
+            <div class="col-10">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAABDJJREFUWEedmEmoHVUQhr+KQRMQDSoRERVUlEBIngRRxCFbF9GnWSkq6kIcQHCKWQh5wYU4EV04gUoWWRgFESOu4yIqiBp9ISAx4ERQcEgQRcPDsqu7bt9z+pzT3TcNj3dvdw2n/vpr6CvMdAmgM2gIgrYaibbfCO/bZ8j4KSmXTjMs33WbD6w5UHjNCkImohMy4WeQWnkGhALR84CHgfXAWrd3ANgP7AB+zKI54KuQslgrc+h5kJ2gpzdOEzIcA+4E3ksel+ALTEzAigjbA7uh8nwbfb+Dh4AXZqiCOrRB24HEOtDPgJMdl48VtgKLfq51wNPAlY7ccdDLgIOF2slSuBxAHP1y4HPAnFqadgt6q8J/nTI9SWC3wmY3bJy6HFgag1RD6l7JVuI6YK+L/gFyIejRiWrHzpnA4YrczjGuAj7JwtFxHqQs0ydiL3cBb7rRd0E2J6HE8u+DbKplhNtRduXjTgsoQ+pMlcEW54fJPwM8nrAvVjPiWwHY9WhbCAMpSRtjOX03tmXclPNNJVH3OUUIbgD2jOLQgNHw8fnA937jd+AS4LdIfxr9aoRDKKf583OBIwk4hSY55uCTtH4o6PXOw7eBW6irLLqWAe8AN9e1CB+osKlbOX3tKztcC6e0cfENwkp38CkNt74GliOsQXl22of4G7gU+GncBG+k4muYdA8qvJhVSnUfAF5OW0PZSdqHhhuThTGPsnPaZ8JZVn+2/nQHyJ58lysnbJYq62IZTHuZA11CWERlP6il7edumvrHXsO4wiwr0D/X0mvRsnz+ED0pC5tbvW6WbE/vr0SYQ5kDzm70E6Vfmr1IvgT9Z4YydoSGibxM4ZGql9wDXOQnKPiJjBmmh6qDv0JTCIMLeYFD0XJ+MbAL4YosfKPDl32gtrR926fSP+2F21BeB04JjBxFOIDyFfBrarxG6KxgtV0VlP2/2mySb/VNiFJjtNTYjrzClY+DbK3W1h25t5Se/NnW+NRkqQOMU2sFDkf5CzpHayvIvrX/fUHH/a4i6Xw1UA2VzDXYvKwAbCBf4Mpm+5oJp8JCLfUhW0stKuPvEugGHw9FIMIXwsKh14N+AViwBvJjKjyXm3E5/SPAOf5gQWB7A29I9hiVQYwaY09Wq+wTbveHADG/FTXG1uQZtlb4N9uXV4H+6Wg1KCfeRx/O1pFjQWCnAn+FiDQpi+1dC3zkQou21A9HX0Zu6qxl7UGUNX7/aufqlMeZzn8/8JJLvFbNpHtPiMjlKN4A7nab9wGvhqDkSL1Q5WWbK2yv/tv3+BqGrCwvLKCyzZt2Yj84UOtlY/W6Y3+Wyr1o++qTB6ob3tBwEDZWNhv7zWvV5NWqtZR1NOuU7jntuEfOnTRlQcccCrbkaXQwGcFSYxwXVYFboZ/eDtFt0d5RMs4HWNvC29mfMiWb3EpOG//s9z9MA1E4vNpw0gAAAABJRU5ErkJggg=="
+                  />
+                </div>
+                <input type="text" class="form-control" required />
+                <div class="invalid-feedback">
+                  Please enter a valid First Name!
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="hosting"
-              id="hostingNo"
-              value="no"
-            />
-            <label class="form-check-label" for="hostingNo">No</label>
+          <div class="row mb-4">
+            <div class="col-2 lbl">Last Name</div>
+            <div class="col-10">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAABDJJREFUWEedmEmoHVUQhr+KQRMQDSoRERVUlEBIngRRxCFbF9GnWSkq6kIcQHCKWQh5wYU4EV04gUoWWRgFESOu4yIqiBp9ISAx4ERQcEgQRcPDsqu7bt9z+pzT3TcNj3dvdw2n/vpr6CvMdAmgM2gIgrYaibbfCO/bZ8j4KSmXTjMs33WbD6w5UHjNCkImohMy4WeQWnkGhALR84CHgfXAWrd3ANgP7AB+zKI54KuQslgrc+h5kJ2gpzdOEzIcA+4E3ksel+ALTEzAigjbA7uh8nwbfb+Dh4AXZqiCOrRB24HEOtDPgJMdl48VtgKLfq51wNPAlY7ccdDLgIOF2slSuBxAHP1y4HPAnFqadgt6q8J/nTI9SWC3wmY3bJy6HFgag1RD6l7JVuI6YK+L/gFyIejRiWrHzpnA4YrczjGuAj7JwtFxHqQs0ydiL3cBb7rRd0E2J6HE8u+DbKplhNtRduXjTgsoQ+pMlcEW54fJPwM8nrAvVjPiWwHY9WhbCAMpSRtjOX03tmXclPNNJVH3OUUIbgD2jOLQgNHw8fnA937jd+AS4LdIfxr9aoRDKKf583OBIwk4hSY55uCTtH4o6PXOw7eBW6irLLqWAe8AN9e1CB+osKlbOX3tKztcC6e0cfENwkp38CkNt74GliOsQXl22of4G7gU+GncBG+k4muYdA8qvJhVSnUfAF5OW0PZSdqHhhuThTGPsnPaZ8JZVn+2/nQHyJ58lysnbJYq62IZTHuZA11CWERlP6il7edumvrHXsO4wiwr0D/X0mvRsnz+ED0pC5tbvW6WbE/vr0SYQ5kDzm70E6Vfmr1IvgT9Z4YydoSGibxM4ZGql9wDXOQnKPiJjBmmh6qDv0JTCIMLeYFD0XJ+MbAL4YosfKPDl32gtrR926fSP+2F21BeB04JjBxFOIDyFfBrarxG6KxgtV0VlP2/2mySb/VNiFJjtNTYjrzClY+DbK3W1h25t5Se/NnW+NRkqQOMU2sFDkf5CzpHayvIvrX/fUHH/a4i6Xw1UA2VzDXYvKwAbCBf4Mpm+5oJp8JCLfUhW0stKuPvEugGHw9FIMIXwsKh14N+AViwBvJjKjyXm3E5/SPAOf5gQWB7A29I9hiVQYwaY09Wq+wTbveHADG/FTXG1uQZtlb4N9uXV4H+6Wg1KCfeRx/O1pFjQWCnAn+FiDQpi+1dC3zkQou21A9HX0Zu6qxl7UGUNX7/aufqlMeZzn8/8JJLvFbNpHtPiMjlKN4A7nab9wGvhqDkSL1Q5WWbK2yv/tv3+BqGrCwvLKCyzZt2Yj84UOtlY/W6Y3+Wyr1o++qTB6ob3tBwEDZWNhv7zWvV5NWqtZR1NOuU7jntuEfOnTRlQcccCrbkaXQwGcFSYxwXVYFboZ/eDtFt0d5RMs4HWNvC29mfMiWb3EpOG//s9z9MA1E4vNpw0gAAAABJRU5ErkJggg=="
+                  />
+                </div>
+                <input type="text" class="form-control" required />
+                <div class="invalid-feedback">
+                  Please enter a valid Last Name!
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="form-group inline">
-          <label for="description">Project Description</label>
-          <textarea
-            class="form-control"
-            id="description"
-            rows="3"
-            placeholder="Describe your project"
-          ></textarea>
-        </div>
-        <button type="submit" class="btn btn-success btn-send">Send</button>
-      </form>
+          <div class="row mb-4">
+            <div class="col-2 lbl">E-Mail</div>
+            <div class="col-10">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAslJREFUWEetmL2KFUEQhb+ONDFThEXfyNg3EAMF2WwV8a5/bOAqgm9iZrZPIaihiIqhIAZCe2emp6e6u6p/lr3RZW511+lTp071XOcAT/2zxfREh70GQmX2aVn6aWxk/VxdNrCnCchiRe6tf0+fOnxagQJc+mABlGZ/DNwDrpuFHCjHHKqD+Am8A17K9DlDb4DDFGOqiYsqjTjscwdPVh3ngH4BV2OwPF5VPDbMDjK/AwdLTjcXS1IQgEYkjf4baYgCmmzuiCNnyK96cuBMO+hptXZM3H7OFeLrDHXwXVJYds2SWWRcHsTDx1r5JUp+TBpb5pl1a8MdZ3ApQ2JF/OrwfqFO0VBqL5u997Corw0MpbmMksXz6gevPE0Jr56iU9Rp2411WTfQoCElV11DusMOgLQEPgzonD40ADW7ZARiHG47g618PY+i5qKzqwjHNCTNauzglqxtp5YmbDi11fYpBXrH9/hARUNFybacjdFRFaxizAXPSsnW4bqB2OxzHb3BzhP7l3tXCamKSnHqZNrPh1IAdZdgQGqygaQ8ki5TBl43Ez1YCtdWpn3GkO4NPagGWNxC9VmWbaV6Q3siTCfzyt05aFvHm14GV7llsT+Wy33zxE/3II8FdzeA18Bt1YWiTNRLjLjCIp163uoEOOpQxArocoif1lzqWKeF2Jf84JiPgAfAtUqCCdBHB6cebtpxSttv5H8D3gKnuUrV/ZSiTSXahee/9yW6kvXNZw93gTN5qyheFMOPlssvo6MpmTnqeH8X3yn/BPwB9wL8Kxz/Gq+p1qCLz/NZVpOBZGiNew/cB76eUz/FsuT6IenVS+Z2IWYCcAf4cFFA1n26ShbATQw9DO39bN9df6VWZCnbCrAjRkp2C/gCfCpfsZp9VpbG+F9KAApua6m8OrgVRy5GV5u3tb8aMujfyLyiDGQwGGp254BbjMn+P4FnGzzMPUcrAAAAAElFTkSuQmCC"
+                  />
+                </div>
+                <input type="email" class="form-control" required />
+                <div class="invalid-feedback">Please enter a valid Email!</div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-2 lbl">Phone #</div>
+            <div class="col-10">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAABEdJREFUWEell0uoVlUUx39LUTSijHJQNIhISHAiNAiJZkmCSQ8rhBTTTG/2UCvf2A28YA1M6aZdnygJiqYN1EnaIAoLpzoIJYgokB6zaGC5Peucfb5v7XP2Pud8uif3fPuxHv+11n+tK1SXAA78H+yXXu3v1172Nmp38o1QcFy+5PJbVxcjciG3fTFmUGehET8GfRu5X0fIItuHejPwOjAGjLRBOqhdVl4yZEboHmBZ+Uhg1MFbA2RQm/3BeVMO6Zki0jPGvBylNMrCUUO3W1pVRcQ80Dv7gCXm8DvgCZO8O4FVA7mfrsPgxP8IIr8bWGGU7QJWAtuAdWbfG5XKmnQ2Nb2oOjkL+N5sHgEWIjjlJ2AHwjuGqzoj1Z7sgljO8kasBT7y3+eAp4H/K1bnCBoFwxkLfVgPn/JK6Ue34Jqk7onfqKXtDR3BsdmyqlcwDvhJ4BFPwP8Ad3ZTmbjlFcZ4aAUORUCXVpnNpVLaXuA1I1rRGS6YOlV23cyNlf0ckLN5Q4OvgdmmsvRTlW8x4pWnlvd/t2dKtNgaEHoAx2/+0Z/A1IpBfwP3+PMvgEVFO74lk2qwFQjVnfo9C9f9/vYMgctG4wXgcX/2AnCyKqKRBFoATDH1Ie+56lqfV11f0PvAx96LE8CLTdnRqN8yuxeSMmg+cNwbcVVgmkFIkfsVGC9w3cE04JcuAYukeyJkdRcnAdeAu3w45jo4Y65ZBL8CnhdwQYF1KaoIfAFC/arNv7SBarvQ9aPJG/39KHBJUfIo6t23y+Q2evRTR5dlIGOCG6kbHVoV46GyZh5E+BnHBG/UgsyQo4ZqVgtsL0MpcNzBJuCKv6/kqQ36VZN/OxFWhTUZQhljalt22qfUc11/ANOzseMvI2IrhRG2ULXdHMv64VPAS5Eq3g68m4poE0KqZQou9/g+L+AbT5S2t80FDvT4qtQURuJb4EljxA5gdexqqspsF1gisN9U2cHKnKRylTxHEZ7BMdl6L7DNwYbI6PIJsCbGYb33laS2+5854Q0Te20XQ1kLuVGBfhLIELiZwLMFX7HVxFONsENdblSVDupZFTQCfyx8iuNNc/lUPieBdvrEitJidfgLRpdkyOIaZDijmw/Mmfa85SBnKu2s54Xd9+aNA7kC7mF/6d8MyTtsPg3gYC5yKaAh07Iu13nPNz+kheWVKA4OgSw0hprRpajWgZb38jHgsKcB+/4iyOeCu+DgakYJ182hTqcHHCw2e/15y/S1KLwdrJwgsM4VSXpvP1t6X2qMIqcsr2umwDyTnsWsHsS68q90y2RQs9FX5UQcrwi854TpTSxsBHwJvFzO6s1V1gGahitKkvMFZhVTQNTF08BzWc79V8gJZ5B6c43jEO62QOmP7/ZNWBvxQ+T/4LhrCGM4bpieGMhuTupbimHK9m7/Eg1cZV0AbI962tPbR6gziimEkjkUPuispx2OAWhFuAkbskA7pOSSygAAAABJRU5ErkJggg=="
+                  />
+                </div>
+                <input type="tel" class="form-control" required />
+                <div class="invalid-feedback">
+                  Please enter a valid Phone Number!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-2 lbl">Address</div>
+            <div class="col-10">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA1RJREFUWEelmLFuFDEQhr+peILkECkSrkkZJLpEouAVqOjpaREFUURBQcUDUNPwArSREjoEFdAEgoRIED0SBebW690de2d2feGKJPjsmd///POPheB8BAij7+xVM8QaW/X55hhUH04b9a/Js/l++346gEQo/iffa1FWd3YySf7lNKC6QLvAy1ThB8BnzXo1+elQBqiG/aLeywCnIItE3yWwL3DW6m89ON2J/Fx9jCURDIsidQQFnJUE14RWDBnb/QhNmY6BzTapnAuh6crtBOIncKcv3xrdWqWhiGv4kTEDfAcOUs4TYCv9PTBVQ42lodIPMh20gJYQ+jIpMOfpbMOQDSpjybeDeoZgCXIKIWrGANNpcRrUTOdIJZtGmeQAQsdMqZIclHBJkH0h+N2nSJtzm6XAaRAWaZZ0mlFg8mulf00w5dMwV7LIjMAizTUFxuvKxv5jxzWfbYGTIGylrrhE2CfkllAOBI+hVKbe9ApmvFuO1iuFngzEQdOWKZmeKWDXhU2g86AmNLQLciyETfX8uAl87R25shOK0bEj8EXFNM2z1FDZTR2B+T5fPnMvgvKJNRozJaBPQDMWShuTqw3LUq5h/OaDD8At++bwHtgzdDXXja51FGT2gNT6O+B2J+ky0c5qIN4Hrq0GxaFCnRhKK8IGgXvAdQfJBfAa5Fes4ZBdAzoK8HtVkVfAt27PlFNrejXwPYQ3hPbZMdys854+ewPqLvBxDCh6lbQDeySP4R1VVFwXXAMyyzqK3S68TW+jLmtQ4EwZtIvKAxRqTa++zd/2RDx05JTsMMX8k8rfpQkqvg1owm9NhgQ85jS2dJkYXSfOL1nfPTGQpyEj2eha/wlIl2xAnQOyO6Xsvq6p0m08htK6K+pUYTWlm5UZhnr1WTJK4p0B5JbMbhGv3h5QQ0Mj0CbrpZ+bjTIS71BWv1OMsqYeHtpem5du8a5KQ4yRkDzPyNftNl2/3J2s+ipnDh/hXhCfrSWh1nx03Mhf/gHcaL0qv9HU6HgGPJpN1TdM/2ydPQI8BZ5khtwPIf94k+oxyEMhbLi8eM5qx22ewS+A5/bXQsuQvuVkgvWy11BV7mlt3ahl3gyVurHtI885cyc9Z65yIVX5AbSd0x4H5X/Z/AOIskg81KI7TwAAAABJRU5ErkJggg=="
+                  />
+                </div>
+                <input type="text" class="form-control" required />
+                <div class="invalid-feedback">
+                  Please enter a valid Address!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-2 lbl">City</div>
+            <div class="col-10">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA1RJREFUWEelmLFuFDEQhr+peILkECkSrkkZJLpEouAVqOjpaREFUURBQcUDUNPwArSREjoEFdAEgoRIED0SBebW690de2d2feGKJPjsmd///POPheB8BAij7+xVM8QaW/X55hhUH04b9a/Js/l++346gEQo/iffa1FWd3YySf7lNKC6QLvAy1ThB8BnzXo1+elQBqiG/aLeywCnIItE3yWwL3DW6m89ON2J/Fx9jCURDIsidQQFnJUE14RWDBnb/QhNmY6BzTapnAuh6crtBOIncKcv3xrdWqWhiGv4kTEDfAcOUs4TYCv9PTBVQ42lodIPMh20gJYQ+jIpMOfpbMOQDSpjybeDeoZgCXIKIWrGANNpcRrUTOdIJZtGmeQAQsdMqZIclHBJkH0h+N2nSJtzm6XAaRAWaZZ0mlFg8mulf00w5dMwV7LIjMAizTUFxuvKxv5jxzWfbYGTIGylrrhE2CfkllAOBI+hVKbe9ApmvFuO1iuFngzEQdOWKZmeKWDXhU2g86AmNLQLciyETfX8uAl87R25shOK0bEj8EXFNM2z1FDZTR2B+T5fPnMvgvKJNRozJaBPQDMWShuTqw3LUq5h/OaDD8At++bwHtgzdDXXja51FGT2gNT6O+B2J+ky0c5qIN4Hrq0GxaFCnRhKK8IGgXvAdQfJBfAa5Fes4ZBdAzoK8HtVkVfAt27PlFNrejXwPYQ3hPbZMdys854+ewPqLvBxDCh6lbQDeySP4R1VVFwXXAMyyzqK3S68TW+jLmtQ4EwZtIvKAxRqTa++zd/2RDx05JTsMMX8k8rfpQkqvg1owm9NhgQ85jS2dJkYXSfOL1nfPTGQpyEj2eha/wlIl2xAnQOyO6Xsvq6p0m08htK6K+pUYTWlm5UZhnr1WTJK4p0B5JbMbhGv3h5QQ0Mj0CbrpZ+bjTIS71BWv1OMsqYeHtpem5du8a5KQ4yRkDzPyNftNl2/3J2s+ipnDh/hXhCfrSWh1nx03Mhf/gHcaL0qv9HU6HgGPJpN1TdM/2ydPQI8BZ5khtwPIf94k+oxyEMhbLi8eM5qx22ewS+A5/bXQsuQvuVkgvWy11BV7mlt3ahl3gyVurHtI885cyc9Z65yIVX5AbSd0x4H5X/Z/AOIskg81KI7TwAAAABJRU5ErkJggg=="
+                  />
+                </div>
+                <input type="text" class="form-control" required />
+                <div class="invalid-feedback">Please enter a valid City!</div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-2 lbl">State</div>
+            <div class="col-10">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAh1JREFUWEe1WEGSwyAMM6d+u8/uLbslJMggG5Gd7amTGCNsSaYt9uRTzOyIFy5epzuWuhgztO/4fG+DOFrJeQKqmKNExYodHnQ7IznHcPp1xFiu74rFJwa0Wqm994WACsU1ihJP7VYQCPwjaQbUOYcVGHIMtKy1JtfAyacpBtsqlCBUaDHXMuS2rCwSOD2SkxkBRBS3qxVlfx7zrXT8wcJi3MfMXtQo9pDQvQNAlRMHIKKA1kxNxbEDqG7V8Nzivvb/WLHX922XPQrCNxhNdSjgDWikxPqgzE4dIAxQ+pbMwb48kv3uBnH8WhwhqeOlXNKkTcSr0isCzMekfieTojMjhzBQrmngYRGgNyDx3+E0zLWVSvymeLONJR8qZgU2vtXHx8hyNF5XnZMwV+L2fQbUgyJjRDsg/Vw0rG+Mh7xP4S5o3TOq4t6AqJW3ZrtL3Tm0uLpwjfg8jtQBuRw/Umb7NsmkDrp7Hw89aWruroyBE+y2kZ1vKXvFypWq8Bb7lTOHHu7ODRO5hSXz5cPOgMoGpGZt2leCE9n/bX6hlYycj2wumvZe9uRCx4s8zUrqgWGFqmVxzyCAlD5TVWgPn4hYIXXPG0dnoyOdWLQme6h8fjY65HyKSabJ/qlC3EiJ1CNBTsbkLmjK/MB79D7TeF0mu0n++FDGxcaIGP0mGimPRnW/Lzz74f9slil3LaWKG3mc7NfikXWo/bdD0v0Ap6D1KhDpwIUAAAAASUVORK5CYII="
+                  />
+                </div>
+                <select class="form-select cust-width" required>
+                  <option value="">Please select your State</option>
+                  <option value="1">Andhra Pradesh</option>
+                  <option value="2">Tamilnadu</option>
+                  <option value="3">Delhi</option>
+                </select>
+                <div class="invalid-feedback">Please select a valid State!</div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-4">Do you have hosting?</div>
+            <div class="col-8">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="hosting"
+                  id="hostingYes"
+                  value="yes"
+                  required
+                />
+                <label class="form-check-label" for="hostingYes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="hosting"
+                  id="hostingNo"
+                  value="no"
+                  required
+                />
+                <label class="form-check-label" for="hostingNo">No</label>
+                <div class="invalid-feedback">Please select an option.</div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-2 lbl">Project Description</div>
+            <div class="col-10">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA7RJREFUWEelmMFvDVEUxn9HurAiSqNExOJJHlJWgmordmIrsUFEYtcN/wmJ2EhsiMTG1rLVooiNdNHSRho8njQkwlau3nlnZu7M3Dt3pmbVzpw595vzfec79z6hwSWA0bj8b//dLF3osd4PPvYvEEbpJgpFVXJGsLt5bChEVgk99t9vF13+qAEgz9W2cpEs24ELwBDwGPhVt25ERYJgMg01kFw55CjwFNirD74C54F3oULU1sfLZ4WVIOdjwCwwXFrkJ3ASWCnnD1LWuBJhyRzDMCOwQzv0k4bu19x94BSw1lrUmwBXrsw6yAk1j9fAiOZcBo4Df9I1AhVqYSIVf2JMYNbkNFl6JkCWFNAhkAUwVui2xafB3E07vQAogeGhoIkZakxemfwl21GWmiXFbgE9F8ywUnlT4JZrvI0ZiQRaMDPATk/cd+A0sAWYB3ar/33GMA58iVAWXjrgT0eAZw6YHsIVDI+AUaVmDcwQwj71EBszgfGJukmNQq0udDEyJ5gRLbv92kntnoMCrxw9pSs5McXE0mLMaJULOjusldml+uthmAI+Ot94GXjg/N8DmQCTtbtb9eY+VK1QF8yc08I+X3HaP0mglRFLX4axACgyV0NkdgEHjPTBWJpWk0YebFfKXuRSGchrx5QHZ0RSJTD0QSbBJGD0sjEvnJFRA0ZnpXJeT1m1fB4wiYDLYFwqi2AilDQApBmSbnJpYh0SD1l1BmQXZA7MiPLWiCZ3P9oAUEJCVhmFZ8HYbrKzKFVNuXoNwFTFUQVULWkHeJl2k8C6EaYwKZgiYF0i67jQOArptOBD+cdm4RaMtXp124SmKYRlZ+gVAIMVeaqriMsF5mYIbBmMndp2HilNyWsaI6OqgxzMJv2kWqEc3oouaO/82HDksxv74kUHfUdg3gijWq1vqqvVJlgqVKa9E3jZfrkFZC+7eRpHWHQOZx3tuD3aTQGaIo5WeVwwRn06QHgduKd3nuiJIZVYx7i6EvqYihd5kYQE7t4vdJlTrYcbFbqkWW8At7USB4AFcpr6CJMY1xgDSs1HV23ZQoB6ybFlAP0cmG268MVscwV9gTMGPrQlpi7eZ4yufkLvOpophzSRdBjSAFAxxzWQ+0U7N+5e2+517EHvfe3SEeZC7/rafhq4kwOV32Ds5LYHvlmBtwb+bpqmiHX7AG0FuarHFOvSb9g0gBbH8GyGVymr/TkkPptagPCU2aehxmz8n3z9y9SNjiiweLWiKapeHVS78zNe47T/03a6yD9r3006BktdSwAAAABJRU5ErkJggg=="
+                  />
+                </div>
+                <textarea class="form-control" required></textarea>
+                <div class="invalid-feedback">
+                  Please enter a valid Description!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success">
+              Send
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAABDxJREFUWEell1uoVkUUx3+rU1lQpIFCFyI4UBFZSUJQQQ+aIUU3u5mJQYpBSTeih4Qo6yWCTkQRJd0IstCnIiqjR6EgUaOIDqV20YrKhy6SYNOs/a29v9l7ZvaeThsOfGfPmln/Weu//mttoeARwJnd+Lf9ChfDs8Ll9AFJz2rafqrNeS+Ca8AV3KXApO2rBagXSxp5wuFA5HIQg235W0SBykUO0iuJt/kjKhxxygqCHHsXxqm03/lA6coFwATwcXOVmUUoF4n8e7ufOr8UWAZcA5xs728B3ujWQhdkxPKIyGU0OQq4DLgauAFkTqIg7gGejgH9V8Lm03qMT8NSgWUOrgROSCiBMaUSktNB9o5FBWSAY+HmHIzjQK4Fp6lYChybMdwPfA1cYuu7gPNqItdKMyJ1sXA1hnOMC8qJxcCsdCTYLbDFwWYlsMBrDlaa7cPAoykZHCj7BsQ8I6WCUIIemdk4LbDZwRbg08DmaOAX4Hh7d47n1ufdcogj1PZy6oiQXAdcBHJEK99jUf8iAKGpaD+jO10BvGMLX/nqOjMlXikdmgS5EZyCWJg8eyTpO8FpFDaBTIdAM5F7BVhla48LrK/749heNax5Ki9TwN35HLIdTYXwJq4iaCn/VIc0XbPt7AWegztKIvQrcGIH0B8V+UYgvu0B276a/WcM1Op71159A0xGlwnsQx9PASpWI/Dj6vsSYQonL4M71N86kpA3ArfbyhMgD6YGmspvosNfDtwHLImPlp/APQM851N7oJPuBJLq9AmEA7imui4E+STHub4qO9uA3drVGeAvkJfAPQnsHUijXvA9s/kROKnPPp6HImuZC24dcAcwN1wWcCZ69/uUfDdaa6us4F50sNr2adHc27WKqyxS6uQcM8tXlqrsA8AZHdxbBZYkyngC3M91oQhc7GBbcYRynBjDa36leHauV/LPOs60238QpEvHjhh3sCkWxrLRoj7idYQV6kLgLSfc1HH3gsAaQ6CFcGec1lAfpKTb91J2vm8rdav4B2ESJ3ssCCqGTbpAFoH7aKAABkbYRLQidgnv4xqJeNYr8l3mdJEfNT6037+BzAN3+P8B6pRU9+PMwOn4sdVMDwKnmEY9D6y1wtuIY00vmP6ZuoxIAdl3CW6+ceURX/v6p72rbkPaOmotSuOKAQ3Pjkrd9Iei3AyuHtZVwVcEvet3PzfrQHc47aH9tl8YcxjjfqPDmnb/00wY9wVfFq8Ct3XD0nf0DL9toiN1bJlKHHaV/w57e4jM9XqsQ6U7Yzsd7n+w9NSrBwVmOziUbBfJhlAKoIznjwEPBYq/Cdzy2EUGyUhgh58Sutsp2ny/B3Sg1+f6asJMyEeWQxE/e4mcE6aW/G8At94TeY+ft88C/h6+chDTnHF6ACiO1fm+9Kf9ZPBniRiaeFYdpyhlJTcshpo4LJwmigDNyNmMNsG/Eew/OKTm/vQAAAAASUVORK5CYII="
+              />
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
+    <script>
+      (() => {
+        "use strict";
+        const forms = document.querySelectorAll(".needs-validation");
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
