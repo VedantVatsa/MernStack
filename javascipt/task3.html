@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task3</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .calculator {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <label for="number1">1st Number:</label>
+      <input type="number" id="number1" /><br /><br />
+
+      <label for="number2">2nd Number:</label>
+      <input type="number" id="number2" /><br /><br />
+
+      <button onclick="multiply()">Multiply</button>
+      <button onclick="divide()">Divide</button><br /><br />
+
+      The Result Is: <span id="result">0</span>
+    </div>
+
+    <script>
+      // JavaScript functions for calculations
+      function multiply() {
+        const firstNum = parseFloat(document.getElementById("number1").value);
+        const secondNum = parseFloat(document.getElementById("number2").value);
+        document.getElementById("result").textContent = firstNum * secondNum;
+      }
+
+      function divide() {
+        const firstNum = parseFloat(document.getElementById("number1").value);
+        const secondNum = parseFloat(document.getElementById("number2").value);
+        document.getElementById("result").textContent = firstNum / secondNum;
+      }
+    </script>
+  </body>
+</html>

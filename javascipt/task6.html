@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fafafa;
+        margin: 0;
+      }
+
+      .box {
+        display: inline;
+      }
+
+      .login-container {
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #dbdbdb;
+        border-radius: 8px;
+        text-align: center;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 48px;
+        font-weight: lighter;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+
+      .input-group {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .input-group img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+        padding: 5px;
+      }
+
+      .input-group input {
+        width: calc(100% - 44px);
+        padding: 10px;
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #0095f6;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #007bb5;
+      }
+
+      .options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .options a {
+        color: #0095f6;
+        text-decoration: none;
+      }
+
+      .options a:hover {
+        text-decoration: underline;
+      }
+
+      .signup-text {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .signup-text a {
+        color: #0095f6;
+        text-decoration: none;
+      }
+
+      .signup-text a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="login-container">
+        <h1 class="logo">Instagram</h1>
+        <form>
+          <div class="input-group">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAzlJREFUWEelmE2IjVEYx3+PjyyYbBSiYalmNSMkFhaSLGxEFpKsZKeZIhZG+U6yQRaaZGFBLChZGQuyoIkoH2Vhga2imcgc73vv+773nPOez5lbU3Pved7n/J//838+7hWcLwGU+0j71G01m2ehfNp8pfmLx5HiR7ep/m8DivISMxAEVfHruFF/3AFaA2Se+lxpn/cBw8BGYG11zyvgOXAJYdLMukZBQA3Su8DPcefEPN4M3AFW1gFbNl+APcDrznlK+ipH4ZS5adoEPAXmR5I3CawH3hmgIw8ZgOKByCJQn4FlMSVV5x8FBhT8S7Mv9ZdH6UHgZtt5MJQdwOM0QHXZx6mp/d0C9udoArgAHMsD5LD2YHwCbMthSOChEnY6K85zb04V3AN25YgUuFtVnLfH27XjZ7NdZSX159op8/cYgWElXE6YRI2c0xMG/YWGyh4zN6qJLsa/wCrge2rteGZZsKteBQ43F4QL4iJw1AU+NAmiwVoGC4BHwNbgWBIeoNhNcg/qhmj0odYY8c/GOcAIcLru2JrpL4ERBTcawDrh+oxxsBseHXF1LQQGQYZA/QEmQN4Iaso7Px2AwlXmQW1ckN5IvaXeOzDpy2YoKLhkoKahh6Fkb2uKZjcA9Assbqem4+cn8BV4L/DBY1PFZlZ0KkN9CCdQHBBYGt+2DR7LHjQGnAV+GyeO7mIA8hTVduA2sCS3P1gz6QewF3hm+9GrWwPUpk7BIeBatfNZfvTd2TzSC6mZB11ap4F91bZppkx7Z7eL+v26YrK/KHrNvBkJ2d/DpoDSd7NJ2g22wdb7ttBZTz8Bqx2xp2Uu2D7kLahBhGl76PpEXc6f8/XNKfUXt2mluNw+x+zdxyfqb8DyGBXurDi12HIlMKGEIfPrTD3LdHkJG1C8jIHJOq9UrkmiXqlWAGXwho5tDZWVdT35wniuQhtpuX3e1+G4NHS8mOBn3ID8pZ4cgGl4BLjiYaj5eBTkpE6vSwB27uO/ljjL7lRRZaMxQFuA8s9sXI42bzvK3giEcZSM94KxRO1Lkx59rmRS7MMM5XqIiMftztc1Z8DQbFgMxlpLwmeU8nBLZw60rUHbsfEz9B94lgc9luViHgAAAABJRU5ErkJggg=="
+              alt="User Icon"
+            />
+            <input type="text" id="username" placeholder="Username" />
+          </div>
+          <div class="input-group">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAzBJREFUWEedmD2PTkEUx38TlR4bSuVuJEofQJRCr1CIZguh8rKxz2ODhJAIhUSl0gml6HwCBVmNkiUKvgDjvpy9d17OmTv3uc3enXvmzDnn/z//mXkc7eMA373Jkw2EH+e/d+7qfDrdTBmtG5oOdsJP+9l+rKRqkp2wKblWIIuRCyeP724D/GXgJLAhMz4BHx089/AlzbSGGatVCO4AW8K+rMIO/nq4ATycy8sgoDj+QsWfAZt1SLtl0y2L3tb2GFS9s7LxyVe9BLwIZnzwcBP4LGMnwD1w+FNB054D3sauysGpzR5GLZpwAPgOHJEJr4ALwL8k7tbuNY6z0uq7ONZjWbHVxWh7FZDTwHv58gfccfC/DSSOAl/BHZRk1oHdaU3oga2t5jXgkRi/Ac6HE5VOfAecEZuLwMuatfoK6X2dzr/dMHMpg/eAW1ZAMn4fuC6ut8DdTbYDnSoztK/tlm3xsmyKu7AWkKZa4N222LSJSLeVgHMKZIq9BD0G5Fg2JI0WUBLr7GU8C8hCxhDGNlKfNkZSocmMM/uafdMktSLziybGIOMYMqtCI8STCQjSAUSJ0/bfloyb4NciJGs6QYnQwU8PT1uCKwj0ARW2iMfAVZWCMzpBEdh22R3wbdeqSmDR+BdwaFLMChkN+1duswcc633HmlM6oEVnyP3AiusXlU9hpQ6rWQM1oCwpZaAy6F50klWiLku+D6YZDypXVKV4TGBYO+wRQ4c6ZL127i9qyQyyd+TRKlRYwIZM4YrVxiGiMX1xVsJKZbupcUBS13DhGuQKNjE6g39baGZUaFIcEoOBNbU61NmtHFCRZxKCY4QsgVIL3g5IUZMVbr1hhcRj8MdS6vkVMnTFuKVPtX3mze+3ZQ15w6wy3RphktNpd7wZuiy0D5gel24uh0Jxq6S4rB2nmwvj+P0HjjX7V4uUiiMwccZeceH2wMvmGoefBzR+7w7pldkGZhaRovGd5j43HD+i1Cy85VzQ3kqvODjc568ebccjhCKeY6Td3G8ensR3/soKjZzIMc7br472WfIZbStvHXoHWWDG3Oq2mqIcpPaG38xHlk3p94w5zIsd/wc5Bik7vrSpfgAAAABJRU5ErkJggg=="
+              alt="Password Icon"
+            />
+            <input type="password" id="password" placeholder="Password" />
+          </div>
+          <button type="button" onclick="login()">Log in</button>
+          <div class="options">
+            <label><input type="checkbox" /> Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+        </form>
+      </div>
+      <p class="signup-text">
+        Don't have an account? <a href="#">Sign up here.</a>
+      </p>
+    </div>
+    <script>
+      function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username === "test" && password === "password") {
+          alert("Login successful");
+        } else {
+          alert("Invalid credentials");
+        }
+      }
+    </script>
+  </body>
+</html>

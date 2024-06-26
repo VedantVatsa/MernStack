@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task</title>
+    <script>
+      function showDate() {
+        const date = new Date();
+        const day = date.getDate();
+        const month = date.toLocaleString("default", { month: "long" });
+        const year = date.getFullYear();
+        document.getElementById("dateDisplay").innerHTML =
+          day + "/" + month + "/" + year;
+      }
+
+      function showTime() {
+        const time = new Date().toString();
+        document.getElementById("timeDisplay").innerHTML = time;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="showDate()">show date</button>
+    <div id="dateDisplay"></div>
+    <br /><br />
+    <button onclick="showTime()">show Time</button>
+    <div id="timeDisplay"></div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      /* Basic styling for the form */
+
+      .error {
+        color: red;
+        display: none;
+      }
+      .error.show {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form name="myForm" onsubmit="return validateForm()" method="post">
+        Name:<br />
+        <input type="text" name="name" />
+        <span id="nameError" class="error">This field is required</span><br />
+
+        Email:<br />
+        <input type="text" name="email" />
+        <span id="emailError" class="error"
+          >A valid email address is required</span
+        ><br />
+
+        Website:<br />
+        <input type="text" name="website" />
+        <span id="websiteError" class="error">A valid URL is required</span
+        ><br />
+
+        Message:<br />
+        <textarea name="message"></textarea>
+        <span id="messageError" class="error">This field is required</span
+        ><br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        const name = document.forms["myForm"]["name"].value;
+        const email = document.forms["myForm"]["email"].value;
+        const website = document.forms["myForm"]["website"].value;
+        const message = document.forms["myForm"]["message"].value;
+
+        if (name === "" || email === "" || website === "" || message === "") {
+          document.getElementById("nameError").classList.add("show");
+          document.getElementById("emailError").classList.add("show");
+          document.getElementById("websiteError").classList.add("show");
+          document.getElementById("messageError").classList.add("show");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
