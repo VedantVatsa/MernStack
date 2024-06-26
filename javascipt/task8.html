@@ -5,40 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
     <style>
-      /* Normalize CSS for consistency across browsers */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       body {
         font-family: Arial, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
-        background: linear-gradient(to bottom, #f8d7da, #f6e1d3);
+
+        background: #f8d7da;
         margin: 0;
       }
       .container {
-        width: 90%;
+        width: 100%;
         max-width: 600px;
         padding: 20px;
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
       }
       h1 {
         text-align: center;
         color: blue;
-        margin-bottom: 20px;
       }
       .form-group {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         position: relative;
       }
       label {
@@ -54,6 +43,7 @@
       select {
         flex: 2;
         padding: 8px;
+        margin-top: 5px;
         border: 1px solid #ccc;
         border-radius: 4px;
       }
@@ -91,37 +81,12 @@
         border-radius: 4px;
         cursor: pointer;
         font-size: 16px;
-        margin-top: 20px;
       }
       button:hover {
         background-color: darkred;
       }
       p {
         text-align: center;
-        margin-top: 20px;
-      }
-
-      @media (max-width: 768px) {
-        .form-group {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        label,
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="number"],
-        input[type="tel"],
-        textarea,
-        select {
-          flex: 1;
-          width: 100%;
-        }
-        .error-message {
-          position: static;
-          margin-left: 0;
-          margin-top: 5px;
-        }
       }
     </style>
   </head>
@@ -232,14 +197,14 @@
           const errorElement = document.getElementById(`${field}Error`);
           if (field === "country") {
             if (input.value === "") {
-              errorElement.style.display = "none";
+              errorElement.style.display = "inline";
               isValid = false;
             } else {
               errorElement.style.display = "none";
             }
           } else if (field === "declaration") {
             if (!input.checked) {
-              errorElement.style.display = "none";
+              errorElement.style.display = "inline";
               isValid = false;
             } else {
               errorElement.style.display = "none";
