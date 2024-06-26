@@ -197,14 +197,14 @@
           const errorElement = document.getElementById(`${field}Error`);
           if (field === "country") {
             if (input.value === "") {
-              errorElement.style.display = "inline";
+              errorElement.style.display = "none";
               isValid = false;
             } else {
               errorElement.style.display = "none";
             }
           } else if (field === "declaration") {
             if (!input.checked) {
-              errorElement.style.display = "inline";
+              errorElement.style.display = "none";
               isValid = false;
             } else {
               errorElement.style.display = "none";
